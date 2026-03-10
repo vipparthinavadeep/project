@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Courses | PathFinder</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>PathFinder</h1>
+<p>Student Career Guidance for Academic Planning</p>
+</header>
+
+<nav>
+<a href="Login.html">Login</a>
+<a href="index.html">Home</a>
+<a href="Courses.html">Courses</a>
+<a href="CareerOptions.html">Career Options</a>
+<a href="Colleges.html">Colleges</a>
+</nav>
+
+<section class="container">
+
+<h2 class="section-title">Select Your Education Level</h2>
+
+<select id="courseSelect" onchange="showCourses()">
+<option value="">-- Select Option --</option>
+<option value="after10">Courses After 10th</option>
+<option value="after12">Courses After 12th</option>
+</select>
+
+<!-- COURSES AFTER 10TH -->
+
+<!-- JavaScript Examples: Expressions, Operators, Conditions, Functions, Objects, Arrays -->
+<script>
+// Basic expressions and operators
+let marks = 85;
+let pass = marks >= 35;
+let remark = pass ? "Passed" : "Failed";
+
+// Condition and function
+function suggestCourse(stream) {
+	if (stream === "science") {
+		return "Consider Engineering or Medicine.";
+	} else if (stream === "commerce") {
+		return "Consider B.Com or CA.";
+	} else {
+		return "Explore Arts and Humanities.";
+	}
+}
+
+// Object and array methods
+const courseList = {
+	after10: ["Diploma", "ITI", "Polytechnic"],
+	after12: ["BSc", "BCom", "BA"]
+};
+const allCourses = [...courseList.after10, ...courseList.after12];
+const diplomaIndex = allCourses.findIndex(c => c === "Diploma");
+</script>
+
+<div id="after10" class="course-box">
+
+<h2>Courses After 10th</h2>
+
+<div class="course-grid">
+
+<div class="course-card">Intermediate (MPC)</div>
+<div class="course-card">Intermediate (BiPC)</div>
+<div class="course-card">Intermediate (CEC)</div>
+<div class="course-card">Intermediate (MEC)</div>
+
+<div class="course-card">Polytechnic</div>
+<div class="course-card">ITI</div>
+
+<div class="course-card">Diploma Mechanical Engineering</div>
+<div class="course-card">Diploma Civil Engineering</div>
+<div class="course-card">Diploma Electrical Engineering</div>
+<div class="course-card">Diploma Computer Engineering</div>
+<div class="course-card">Diploma Automobile Engineering</div>
+<div class="course-card">Diploma Electronics Engineering</div>
+
+<div class="course-card">Hotel Management</div>
+<div class="course-card">Agriculture</div>
+<div class="course-card">Fashion Designing</div>
+<div class="course-card">Animation</div>
+
+</div>
+
+</div>
+
+<!-- COURSES AFTER 12TH -->
+
+<div id="after12" class="course-box">
+
+<h2>Courses After 12th</h2>
+
+<h3>Science</h3>
+
+<div class="course-grid">
+
+<div class="course-card">B.Tech / B.E</div>
+<div class="course-card">MBBS</div>
+<div class="course-card">BDS</div>
+<div class="course-card">B.Sc</div>
+<div class="course-card">B.Pharmacy</div>
+<div class="course-card">BCA</div>
+<div class="course-card">B.Sc Agriculture</div>
+<div class="course-card">B.Sc Biotechnology</div>
+<div class="course-card">B.Sc Computer Science</div>
+<div class="course-card">B.Sc Nursing</div>
+
+</div>
+
+<h3>Commerce</h3>
+
+<div class="course-grid">
+
+<div class="course-card">B.Com</div>
+<div class="course-card">BBA</div>
+<div class="course-card">CA</div>
+<div class="course-card">CS</div>
+<div class="course-card">CMA</div>
+
+</div>
+
+<h3>Arts</h3>
+
+<div class="course-grid">
+
+<div class="course-card">BA</div>
+<div class="course-card">BA Journalism</div>
+<div class="course-card">BA Psychology</div>
+<div class="course-card">BFA</div>
+<div class="course-card">Hotel Management</div>
+<div class="course-card">Fashion Designing</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 PathFinder</p>
+</footer>
+<script src="script.js"></script>
+<script>
+
+function showCourses(){
+
+let selection=document.getElementById("courseSelect").value;
+
+document.getElementById("after10").style.display="none";
+document.getElementById("after12").style.display="none";
+
+if(selection==="after10"){
+document.getElementById("after10").style.display="block";
+}
+
+if(selection==="after12"){
+document.getElementById("after12").style.display="block";
+}
+
+}
+
+</script>
+
+</body>
+</html>

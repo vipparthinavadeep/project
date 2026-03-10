@@ -1,0 +1,662 @@
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(180deg,#f8fafc,#eef2ff);
+color:#1e293b;
+line-height:1.6;
+animation:pageFade .8s ease-in;
+}
+
+@keyframes pageFade{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+header{
+background:linear-gradient(135deg,#4338ca,#6366f1);
+color:white;
+text-align:center;
+padding:50px 20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+header h1{
+font-size:40px;
+letter-spacing:1px;
+}
+
+header p{
+margin-top:8px;
+opacity:0.9;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+nav{
+background:white;
+padding:15px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav a{
+text-decoration:none;
+color:#334155;
+margin:0 20px;
+font-weight:600;
+font-size:16px;
+position:relative;
+transition:all .3s ease;
+}
+
+/* underline animation */
+
+nav a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-4px;
+background:#4f46e5;
+transition:.3s;
+}
+
+nav a:hover{
+color:#4f46e5;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
+.hero{
+text-align:center;
+padding:100px 20px;
+animation:fadeIn 1s ease;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+color:#1e293b;
+animation:floatText 3s ease-in-out infinite alternate;
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+color:#475569;
+}
+
+@keyframes floatText{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-8px);
+}
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 34px;
+background:#4f46e5;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:all .3s ease;
+box-shadow:0 8px 20px rgba(79,70,229,0.3);
+}
+
+.btn:hover{
+background:#3730a3;
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(79,70,229,0.4);
+}
+
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:40px 0;
+}
+
+/* ============================= */
+/* SECTION TITLE */
+/* ============================= */
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
+background:linear-gradient(90deg,#4f46e5,#9333ea);
+-webkit-background-clip:text;
+color:transparent;
+font-weight:700;
+}
+
+/* ============================= */
+/* GRID LAYOUT */
+/* ============================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:all .35s ease;
+border-top:4px solid #6366f1;
+animation:cardFade .6s ease forwards;
+opacity:0;
+}
+
+/* animation delays */
+
+.card:nth-child(1){animation-delay:.1s;}
+.card:nth-child(2){animation-delay:.2s;}
+.card:nth-child(3){animation-delay:.3s;}
+.card:nth-child(4){animation-delay:.4s;}
+.card:nth-child(5){animation-delay:.5s;}
+.card:nth-child(6){animation-delay:.6s;}
+
+@keyframes cardFade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.card h3{
+margin-bottom:10px;
+color:#1e293b;
+}
+
+.card p{
+color:#475569;
+font-size:14px;
+margin:5px 0;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,0.18);
+border-top:4px solid #4f46e5;
+}
+
+
+/* ============================= */
+/* SEARCH BOX */
+/* ============================= */
+
+.search-box{
+text-align:center;
+margin-bottom:30px;
+}
+
+.search-box input{
+padding:12px 18px;
+width:320px;
+border-radius:8px;
+border:1px solid #cbd5e1;
+font-size:15px;
+transition:all .3s ease;
+}
+
+.search-box input:focus{
+border-color:#6366f1;
+outline:none;
+box-shadow:0 0 0 3px rgba(99,102,241,0.2);
+}
+
+.search-box input:hover{
+transform:scale(1.03);
+}
+
+/* ============================= */
+/* SELECT DROPDOWN */
+/* ============================= */
+
+select{
+padding:12px;
+border-radius:8px;
+border:1px solid #cbd5e1;
+font-size:16px;
+margin:20px auto;
+display:block;
+transition:.3s;
+}
+
+select:hover{
+border-color:#6366f1;
+}
+
+/* ============================= */
+/* COURSE BOX */
+/* ============================= */
+
+.course-box{
+display:none;
+margin-top:30px;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+animation:fadeIn .6s ease;
+}
+
+.course-box ul{
+margin-top:15px;
+padding-left:20px;
+}
+
+.course-box li{
+margin:8px 0;
+}
+
+/* ============================= */
+/* COURSE GRID */
+/* ============================= */
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+/* COURSE CARD */
+
+.course-card{
+background:white;
+padding:15px;
+border-radius:8px;
+text-align:center;
+font-weight:600;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:all .3s ease;
+border-left:4px solid #6366f1;
+}
+
+.course-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+background:#f8fafc;
+}
+
+/* ============================= */
+/* COLLEGE SECTION */
+/* ============================= */
+
+.college-section{
+margin-top:40px;
+margin-bottom:15px;
+font-size:24px;
+color:#1e293b;
+border-left:5px solid #6366f1;
+padding-left:10px;
+}
+
+/* ============================= */
+/* STARS */
+/* ============================= */
+
+.stars{
+color:#fbbf24;
+margin-top:5px;
+font-size:18px;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer{
+background:#1e293b;
+color:#cbd5f5;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+
+/* ============================= */
+/* SMALL ANIMATIONS */
+/* ============================= */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px 12px 0 0;
+margin:0;
+display:block;
+}
+/* ================================= */
+/* ADVANCED UI ANIMATIONS */
+/* ================================= */
+
+/* Smooth scrolling */
+
+html{
+scroll-behavior:smooth;
+}
+
+/* Card hover glow */
+
+.card:hover{
+box-shadow:0 25px 60px rgba(79,70,229,0.35);
+transform:translateY(-12px) scale(1.03);
+}
+
+/* Image zoom effect */
+
+.card img{
+transition:transform .5s ease;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+/* Floating animation for hero button */
+
+.btn{
+position:relative;
+overflow:hidden;
+}
+
+/* Ripple animation */
+
+.btn::after{
+content:"";
+position:absolute;
+width:0;
+height:0;
+border-radius:50%;
+background:rgba(255,255,255,0.4);
+transform:translate(-50%,-50%);
+left:50%;
+top:50%;
+transition:width .6s,height .6s;
+}
+
+.btn:active::after{
+width:300px;
+height:300px;
+}
+
+/* Scroll reveal animation */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Navbar active link */
+
+nav a.active{
+color:#4f46e5;
+font-weight:700;
+}
+
+/* Floating effect for hero title */
+
+.hero h1{
+animation:floatHero 4s ease-in-out infinite;
+}
+
+@keyframes floatHero{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+/* Page loader */
+
+.loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader span{
+width:40px;
+height:40px;
+border:4px solid #6366f1;
+border-top:4px solid transparent;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+/* ============================= */
+/* PROFESSIONAL COLOR THEME */
+/* ============================= */
+
+:root{
+
+--primary:#4f46e5;
+--secondary:#9333ea;
+--accent:#06b6d4;
+--success:#10b981;
+
+--bg:#f8fafc;
+--card-bg:#ffffff;
+
+--text-dark:#0f172a;
+--text-light:#64748b;
+
+--border:#e2e8f0;
+
+}
+
+/* BODY */
+
+body{
+background:linear-gradient(180deg,#f1f5f9,#eef2ff);
+color:var(--text-dark);
+}
+
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+
+/* NAVBAR */
+
+nav{
+background:white;
+border-bottom:1px solid var(--border);
+}
+
+nav a{
+color:var(--text-dark);
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+
+/* SECTION TITLE */
+
+.section-title{
+background:linear-gradient(90deg,var(--primary),var(--accent));
+-webkit-background-clip:text;
+color:transparent;
+}
+
+
+/* CARDS */
+
+.card{
+background:var(--card-bg);
+border-top:4px solid var(--primary);
+transition:all .35s ease;
+}
+
+.card:hover{
+border-top:4px solid var(--accent);
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+
+/* COURSE CARDS */
+
+.course-card{
+background:white;
+border-left:5px solid var(--primary);
+}
+
+.course-card:hover{
+border-left:5px solid var(--accent);
+}
+
+
+/* BUTTON */
+
+.btn{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+.btn:hover{
+background:linear-gradient(135deg,var(--secondary),var(--primary));
+}
+
+
+/* SELECT DROPDOWN */
+
+select{
+border:1px solid var(--border);
+}
+
+select:hover{
+border-color:var(--primary);
+}
+
+
+/* SEARCH BOX */
+
+.search-box input{
+border:1px solid var(--border);
+}
+
+.search-box input:focus{
+border-color:var(--primary);
+}
+
+
+/* COLLEGE SECTION */
+
+.college-section{
+border-left:6px solid var(--accent);
+}
+
+
+/* FOOTER */
+
+footer{
+background:#0f172a;
+color:#cbd5f5;
+}
+
+
+/* STAR RATING */
+
+.stars{
+color:#f59e0b;
+}
+
+
+/* IMAGE HOVER */
+
+.card img{
+transition:transform .4s ease;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
